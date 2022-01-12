@@ -1,6 +1,6 @@
 #!usrbinenv bash
 
-PROJECT_NAME=PTexam
+PROJECT_NAME=ptexam
 DROPLET_URL=karpantschof.com
 DROPLET_USER=root
 read -p "Press enter to deploy $PROJECT_NAME @ $DROPLET_URL"
