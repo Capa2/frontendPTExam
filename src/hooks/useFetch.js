@@ -13,7 +13,7 @@ const useFetch = () => {
     const [loading, setLoading] = useState(false);
 
     const doFetch = async (method, url, body) => {
-        if (loading) await abort();
+        //if (loading) await abort();
         setLoading(true);
         try {
             const res = await fetchDeta(url, makeOptions(method, signal, token, body));
