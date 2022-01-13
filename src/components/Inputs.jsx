@@ -1,18 +1,25 @@
-import { FormControl } from "react-bootstrap";
+import { FormControl, FormLabel } from "react-bootstrap";
 
-const InputText = ({ placeholder, onChange }) => {
-    return (<FormControl
-        onChange={e => onChange(e.target.value)}
-        className="my-2"
-        type="text"
-        placeholder={placeholder}
-        id={placeholder} />);
+const InputText = ({ label, placeholder, onChange }) => {
+    return (
+        <>
+            {label && <FormLabel className="mt-2 ml-1">{label}</FormLabel>}
+            <FormControl
+                key={placeholder}
+                onChange={e => onChange(e.target.value)}
+                className="mb-2"
+                type="text"
+                placeholder={placeholder}
+                id={placeholder} />
+        </>
+    );
 }
 
 const InputPass = ({ onChange }) => {
     return (<FormControl
+        key="passwordInput"
         onChange={e => onChange(e.target.value)}
-        className="my-2"
+        className="mb-4"
         type="password"
         placeholder="password"
         id="password" />);

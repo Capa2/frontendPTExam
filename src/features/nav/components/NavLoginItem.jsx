@@ -15,7 +15,7 @@ export default function NavLoginItem() {
     return (
         <div className="navLoginItem">
             {user ? <div>
-                <li><span className="userInfo">{user.username}</span> <span className="badge bg-primary rounded-pill">{user.roles.join(", ")}</span></li>
+                <li><span className="userInfo">{user.email}</span> <span className="badge bg-primary rounded-pill">{user.roles.join(", ")}</span></li>
                 <li><NavLink to="/" onClick={logout}>Sign out</NavLink></li>
             </div>
                 : <li><NavLink className={isActive} to="/login">Sign in</NavLink></li>
