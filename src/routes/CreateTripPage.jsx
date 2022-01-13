@@ -1,6 +1,6 @@
 import CreateTripForm from "../features/createTrip/CreateTripForm";
 
-function CreateTripPage() {
+const CreateTripPage = () => {
 
     return (
         <>

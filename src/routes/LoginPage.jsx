@@ -1,7 +1,7 @@
 import LoginForm from "../components/LoginForm";
 import { Link } from "react-router-dom";
 
-export default function LoginPage() {
+const LoginPage = () => {
     return (
         <>
             <h2 align="center">Log in</h2>
@@ -10,3 +10,5 @@ export default function LoginPage() {
         </>
     );
 }
+
+export default LoginPage;

@@ -6,13 +6,16 @@ import NoMatchPage from "./NoMatchPage";
 import LoginPage from "./LoginPage";
 import SignupPage from "./SignupPage";
 import CreateTripPage from "./CreateTripPage";
+import TripsPage from './TripsPage';
 
 import { useContext } from "react";
 import { Container } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
 import { AlertContext } from "../providers/AlertContext";
 import ErrorBoundary from "../providers/ErrorBoundery";
-function Pages() {
+
+
+const Pages = () => {
 
     const { alert } = useContext(AlertContext);
 
@@ -25,6 +28,7 @@ function Pages() {
                     <Route path="/user" element={<UserPage />} />
                     <Route path="/admin" element={<AdminPage />} />
                     <Route path="/createtrip" element={<CreateTripPage />} />
+                    <Route path="/trips" element={<TripsPage />} />
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/signup" element={<SignupPage />} />

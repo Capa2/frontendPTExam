@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthContext";
 
-function AdminPage() {
+const AdminPage = () => {
     const { user } = useContext(AuthContext);
     const {email, name, address, phone, birthYear, gender} = user;
 

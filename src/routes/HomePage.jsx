@@ -1,4 +1,4 @@
-export default function HomePage() {
+const HomePage = () => {
 
     return (
         <>
@@ -7,3 +7,5 @@ export default function HomePage() {
         </>
     );
 }
+
+export default HomePage;
