@@ -5,6 +5,7 @@ import AdminPage from "./AdminPage";
 import NoMatchPage from "./NoMatchPage";
 import LoginPage from "./LoginPage";
 import SignupPage from "./SignupPage";
+import CreateTripPage from "./CreateTripPage";
 
 import { useContext } from "react";
 import { Container } from "react-bootstrap";
@@ -23,6 +24,7 @@ function Pages() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/user" element={<UserPage />} />
                     <Route path="/admin" element={<AdminPage />} />
+                    <Route path="/createtrip" element={<CreateTripPage />} />
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/signup" element={<SignupPage />} />

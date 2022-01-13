@@ -6,10 +6,15 @@ function useUser() {
     const setUser = (json) => {
         if (!json) setUserState(null);
         else {
-            const { username, roles } = json;
+            const { email, roles, name, address, phone, birthYear, gender } = json;
             setUserState({
-                username: username,
+                email: email,
                 roles: roles.split(","),
+                name: name,
+                address: address,
+                phone: phone,
+                birthYear: birthYear,
+                gender: gender,
             });
         }
     }

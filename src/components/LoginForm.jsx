@@ -13,7 +13,7 @@ export default function LoginForm() {
     const url = `${API}/login`;
     const [response, loading, doFetch] = useFetch();
 
-    const [usernameValue, setUsernameValue] = useState();
+    const [emailValue, setEmailValue] = useState();
     const [passwordValue, setPasswordValue] = useState();
 
     useEffect(() => {
@@ -24,16 +24,16 @@ export default function LoginForm() {
     }, [response, setToken, navigate]);
 
     function submit(e) {
-        if (usernameValue && passwordValue) doFetch("POST", url, { username: usernameValue, password: passwordValue });
+        if (emailValue && passwordValue) doFetch("POST", url, { email: emailValue, password: passwordValue });
         e.preventDefault();
     }
 
     return (
         <>
             <Form className="loginForm mt-3 m-auto" onSubmit={submit}>
-                <InputText placeholder="username" onChange={setUsernameValue} />
+                <InputText placeholder="email" onChange={setEmailValue} />
                 <InputPass onChange={setPasswordValue} />
-                <Button className="d-block mx-auto" type="submit" size="lg" disabled={loading || !usernameValue || !passwordValue}>Sign in</Button>
+                <Button className="d-block mx-auto" type="submit" size="lg" disabled={loading || !emailValue || !passwordValue}>Sign in</Button>
             </Form>
         </>
     );
